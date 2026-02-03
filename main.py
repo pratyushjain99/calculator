@@ -1,8 +1,5 @@
 import streamlit as st
 
-# ────────────────────────────────────────────────
-#   YOUR FUNCTION — define it here
-# ────────────────────────────────────────────────
 letter_to_number = {
     'A': 1, 'I': 1, 'J': 1, 'Q': 1, 'Y': 1, '1': 1, 'R': 2,
     'B': 2, 'K': 2, '2': 2, 'C': 3, 'S': 3, 'L': 3, 'G': 3,
@@ -21,7 +18,6 @@ def letter_sum(input_string):
 
     return total_sum
 
-
 # ────────────────────────────────────────────────
 #   App configuration & session state
 # ────────────────────────────────────────────────
@@ -36,7 +32,6 @@ st.markdown("""
 if "history" not in st.session_state:
     st.session_state.history = []
 
-
 # ────────────────────────────────────────────────
 #   UI
 # ────────────────────────────────────────────────
@@ -44,7 +39,6 @@ st.title("Numerology Calculator")
 st.caption("Name → Numerological Value")
 
 # st.markdown("---")
-
 
 st.markdown(
     """
@@ -59,8 +53,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
 
 # Main input
 
@@ -144,4 +136,5 @@ if st.session_state.history:
 
 # Footer
 st.markdown("---")
+
 st.caption("Simple numerology calculator • Session history only")

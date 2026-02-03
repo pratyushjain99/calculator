@@ -116,14 +116,16 @@ if st.session_state.history:
             width="small",          # ← narrowest – just enough for 1–2 digits + header
             format="%d"
         ),
+        "Result": st.column_config.NumberColumn(
+            "Result",
+            width="small",         # ← medium – enough for typical integers
+            format="%d"
+
+        ),
+
         "Input": st.column_config.TextColumn(
             "Input",
             width="large",          # ← takes most of the space (good for longer strings)
-        ),
-        "Result": st.column_config.NumberColumn(
-            "Result",
-            width="medium",         # ← medium – enough for typical integers
-            format="%d"
         )
     }
 )
@@ -138,3 +140,4 @@ if st.session_state.history:
 st.markdown("---")
 
 st.caption("Simple numerology calculator • Session history only")
+

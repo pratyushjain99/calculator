@@ -102,7 +102,7 @@ if st.session_state.history:
     
     # Prepare data with explicit S. No. (1 = most recent)
     history_rows = [
-        {"S. No.": i + 1, "Input": inp, "Result": res}
+        {"S. No.": i + 1, "Numerology": res, "Name": inp}
         for i, (inp, res) in enumerate(reversed(st.session_state.history))
     ]
     
@@ -138,6 +138,7 @@ if st.session_state.history:
 st.markdown("---")
 
 st.caption("Simple numerology calculator • Session history only")
+
 
 
 

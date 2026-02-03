@@ -1,2 +1,2 @@
-# numcalc
-Simple numerology calculator tool
+# Calculator
+Simple calculator tool
